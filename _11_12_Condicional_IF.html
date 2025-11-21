@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
-	<title>11 y 12 - Control flujo. Condicional IF I</title>
+	<title>11 y 12 - Control flujo Condicional If I</title>
 	<style>
-		table{
+		table {
+			/*Centrar tabla*/
 			margin: auto;
 		}
 	</style>
 	<script type="text/javascript">
-		/*Operadores de comparación
-		=== estrictamente igual comparando el tipo de dato,
+		/*
+		Estructuras de control de flujo
+			Código que modifica el flujo de ejecución del programa, es decir en lugar de que vaya de arriba a abajo
+			línea por línea se cambia de una línea a otra situada en cualquier parte del código
+
+		Condicionles
+			Sirven para elegir una opción de entre dos o más opciones, ej: si el usuario no ha rellenado un campo obligatorio
+			del formulario entonce no podrá enviarlo.
+
+		Operadores de comparación estrictos
+		=== estrictamente igual comparando el tipo de dato.
 		!== estrictamente diferente incluyendo el tipo de dato.
+		
+		&& - sirve para unir dos condiciones donde las 2 deben ser verdaderas para entrar a ese flujo
+		|| - sirve para unir dos condiciones donde una u otra debe ser verdadera para entrar a ese flujo
+		NOTA: Esto funciona unicamente cuando se ejecutará el mismo flujo para todas las condiciones, de lo contrario
+		se necesitan condicionales anidados, ej: el ejemplo para cambiar el color del body que está abajo
 		*/
-		var precioCoche = 250000;
+		var precioCoche = 80000;
 
 		var dineroAhorrado = prompt("Introduce cuanto dinero tienes");
 
 		var edad = prompt("Introduce cuantos años tienes");
 
-		if(dineroAhorrado >= precioCoche && edad >= 18){
+		if (dineroAhorrado >= precioCoche && edad >= 18) {
 			alert("Puedes comprar el coche");
-		}else{
-			alert("Aún no puedes, pero seguro pronto lo harás!");
+		} else {
+			alert("Aún no puedes comprar el coche, pero seguro pronto podrás!");
 		}
 	</script>
 </head>
+
 <body id="cuerpo">
+	<form action="" name="form1" method="POST" id="miFormulario"></form>
 	<table width="25%" border="1" id="miTabla">
 		<tr>
 			<td>
@@ -39,7 +57,7 @@
 		</tr>
 		<tr>
 			<td>
-				Apellidos::
+				Apellidos:
 			</td>
 			<td>
 				<label for="textfield2"></label>
@@ -61,7 +79,7 @@
 			</td>
 			<td>
 				<label for="textfield4"></label>
-				<input type="text" name="textfield4" id="textfield"4>
+				<input type="text" name="textfield4" id="textfield" 4>
 			</td>
 		</tr>
 		<tr>
@@ -74,22 +92,25 @@
 		</tr>
 	</table>
 
-	<!-- Se crea el JavaScript aquí para casos de mantenimiento, no puede leer 
-		el documento algo que no ha pasado(en este caso el mapeo de elementos) -->
+	<!-- Se crea el JavaScript aquí para casos de mantenimiento, no puede leer el documento algo que no ha
+		pasado (en este caso el mapeo de elementos) -->
 	<script>
+		//Guardando body
 		var cuerpo = document.getElementById("cuerpo");
 
+		//Es lo mismo poner el toLowerCase() en cada condición o directamente en el texto que se introduce
 		var colorWeb = prompt("Introduce un color [Rojo | Verde | Azul]").toLowerCase();
 
-		if(colorWeb == "rojo"){
+		if (colorWeb == "rojo") {
 			cuerpo.style.background = "red";
-		}else if(colorWeb == "verde"){
+		} else if (colorWeb == "verde") {
 			cuerpo.style.background = "green";
-		}else if(colorWeb == "azul"){
+		} else if (colorWeb == "azul") {
 			cuerpo.style.background = "blue";
-		}else{
+		} else {
 			alert("Los colores disponibles son: rojo, verde y azul");
 		}
 	</script>
 </body>
+
 </html>

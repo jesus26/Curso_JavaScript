@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
-	<title>13 y 14 - Control flujo. Condicional IF II</title>
+	<title>13 y 14 - Control flujo. Condicional If III y IV</title>
 
 	<script>
-	//Convertir de string a entero
+		//Convertir de string a entero, si no se convierte los valores se van a considerar string
 		var numero1 = parseInt(prompt("Introduce el primer Número"));
 		var numero2 = parseInt(prompt("Introduce el segundo Número"));
-		
+
 		//typeof() permite saber que tipo de valor es una variable
 		//alert(typeof(numero1));
 
-		//Saber si los números ingresados son numericos.
-		if(!isNaN(numero1) && !isNaN(numero2)){
+		//Saber si los números ingresados son numéricos, Nan = Not a Number
+		if (!isNaN(numero1) && !isNaN(numero2)) {
 			var operacion = prompt("Elige una operacion:" +
-					" [Suma(s), Resta(r), Multiplicación(m), División(d))").toLowerCase();
+				" [Suma(s), Resta(r), Multiplicación(m), División(d))").toLowerCase();
 
 			var resultado;
 
-			if(operacion == "s"){
+			if (operacion == "s") {
 				resultado = numero1 + numero2;
-			}else if(operacion == "r"){
+			} else if (operacion == "r") {
 				resultado = numero1 - numero2;
-			}else if(operacion == "m"){
+			} else if (operacion == "m") {
 				resultado = numero1 * numero2;
-			}else if(operacion == "d"){
+			} else if (operacion == "d") {
 				resultado = numero1 / numero2;
-			}else{
+			} else {
 				resultado = "No valido";
 			}
 
 			alert("El resultado es " + resultado);
-		}else{
+		} else {
 			alert("No se pueden operar los valores ingresados");
-		}	
+		}
 	</script>
 </head>
+
 <body>
-	
+
 </body>
+
 </html>

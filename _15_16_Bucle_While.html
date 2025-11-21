@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>15 y 16 - Control flujo. Bucle While</title>
 
 	<script type="text/javascript">
+		/*
+		Tipos de bucles>
+		determinados .- antes de ejecutar el código se conoce cuantas veces se va a repetir ciertas líneas de código
+			for
+
+		indeterminados .- antes de ejecutar el código no se conoce cuantas veces se va a repetir ciertas líneas de código
+			while
+			do while
+		*/
+
 		//Declarando variable
 		var variable = "Jesús";
 
@@ -12,7 +23,7 @@
 		var contador = 0;
 
 		//Utilizando un ciclo while
-		while(contador < 10){
+		while (contador < 10) {
 			//Imprimiendo valor de la variable.
 			document.write(variable + "<br>");
 
@@ -21,30 +32,32 @@
 		}
 
 		document.write("<br><br>" + "***RECORRER ARRAY CON CICLO WHILE***<br>");
-		var miArray = ["Jesus", "Otoniel", "Fredy", "Martin", "Fabiola", "Eberardo", 
+		var miArray = ["Jesus", "Otoniel", "Fredy", "Martin", "Fabiola", "Eberardo",
 			"Candelaria", "Cristobal"];
 
 		var contadorArray = 0;
-		while(contadorArray < miArray.length){
+		while (contadorArray < miArray.length) {
 			document.write(miArray[contadorArray] + ", ");
-			contadorArray++;			
+			contadorArray++;
 		}
 
 		//Repitiendo orden hasta que se ingrese la contraseña apropiada.
 		var password = "123";
 		var passwordIngresada = prompt("Ingresa tu contraseña", "Ingresa contraseña");
 
-		while(password != passwordIngresada){
-			/*El segundo parametro funciona para Internet explorer, con eso se evita 
+		while (password != passwordIngresada) {
+			/*El segundo parámetro funciona para Internet Explorer, con eso se evita 
 			que salga undefined como valor por default*/
-			passwordIngresada = prompt("Error, Ingresa tu contraseña de nuevo", 
-				"Ingresa contraseña");	
+			passwordIngresada = prompt("Error, Ingresa tu contraseña de nuevo",
+				"Ingresa contraseña");
 		}
 
 		document.write("<br><br>Has accedido al sistema");
 	</script>
 </head>
+
 <body>
-	
+
 </body>
+
 </html>

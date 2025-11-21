@@ -15,6 +15,7 @@ p{
 	font-size:2em;
 }
 
-/*Aplica a etiqueta span dentro de una etiqueta p*/
-p span{font-size:2em;
+/*Aplica a etiqueta <span> que esté dentro de una etiqueta <p>*/
+p span{
+	font-size:2em;
 }

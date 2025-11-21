@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
-	<title>06 - Sintaxis Básica IV, Operadores y Promp</title>
-	
+	<title>06 - Sintaxis Básica IV, Operadores y prompt</title>
+
 	<link rel="stylesheet" href="css/estilo.css"> <!-- Enlace a un archivo de estilo-->
 	<script type="text/javascript">
-		/*Se pueden facilmente tener más de un apartado de js*/
+		/*Se pueden tener más de un apartado de js dentro del archivo html*/
 
-		/*La funcion promt sirve para obtener datos del usuario, esta muestra una ventana con 
-		una casilla lista para recibir datos*/
+		/*La función prompt sirve para obtener datos del usuario, esta muestra una ventana con  un campo de texto listo para recibir datos*/
 		var nombre = prompt("Introduce tu nombre");
 		var apellido = prompt("Introduce tus apellidos");
 		var edad = prompt("Introduce tu edad");
 		var quitar = prompt("¿Cuantos años te gustaría quitarte?");
+		/*Estas variables se utilizan en otro apartado de script*/
 
+		/*Operadores de incremento y decremento
+		+= incrementa en x el valor de una variable; record += 10 es lo mismo a record = record + 10;
+		-= decrementa en x el valor de una variable; record -= 7 es lo mismo a record = record - 7;
+		*= miltiplica en x el valor de una variable; record *= 3 es lo mismo a record = record * 3;
+		/= divide en x el valor de una variable; record /= 5 es lo mismo a record = record / 5;
+		++ incrementa en 1 el valor de una variable
+		-- decrementa en 1 el valor de una variable
+		*/
 		edad -= quitar; /*Con este operador se resta, es lo mismo que edad = edad - quitar*/
 
-		/*Estas variables se utilizan en otro apartado de script*/
 	</script>
 </head>
+
 <body>
 	<h1>Pedir datos de entrada</h1>
 	<script type="text/javascript">
 
-		/*Para escribir texto de javaScript a html*/
+		/*Para escribir texto de javaScript en etiquetas html*/
 		document.write("<p>" + nombre + " " + apellido + "</p>");
 
 		/*La línea de arriba es exactamente lo mismo que lo de a continuación*/
 		document.write("<p>");
-		document.write("Bienvenido: " + nombre + " " + apellido + "<br>" + " y te gustaría tener " 
+		document.write("Bienvenido: " + nombre + " " + apellido + "<br>" + " y te gustaría tener "
 			+ edad + " años");
 		document.write("</p>");
 		document.write("<h1>HTML en JavaScript</h1>")
 	</script>
 </body>
+
 </html>

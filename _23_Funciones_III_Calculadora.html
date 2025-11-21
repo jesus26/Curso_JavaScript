@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Calculadora</title>
 
 	<script>
-		//Funciones de operaciones mátematicas básicas.
-		function Suma(num1, num2){
+		//Funciones de operaciones matemáticas básicas.
+		function Suma(num1, num2) {
 			alert("La suma es:" + " " + (num1 + num2));
 		}
 
-		function Resta(num1, num2){
+		function Resta(num1, num2) {
 			alert("La resta es: " + (num1 - num2));
 		}
 
-		function Multiplicar(num1, num2){
+		function Multiplicar(num1, num2) {
 			alert("La multiplicación es: " + (num1 * num2));
 		}
 
-		function Dividir(num1, num2){
+		function Dividir(num1, num2) {
 			alert("La división es: " + (num1 / num2));
 		}
 
 		//Variable para repetir.
 		var respRepetir;
 
-		do{
+		do {
 			var num1 = parseInt(prompt("Introduce el primer número"));
 			var num2 = parseInt(prompt("Introduce el segundo número"));
 
-			var operacion = prompt("¿Qué operación deseas realizar?");
-			if(operacion == "suma"){
+			var operacion = prompt("¿Qué operación deseas realizar [suma | resta | division | multiplicacion]?");
+			if (operacion == "suma") {
 				Suma(num1, num2);
-			}else if(operacion == "resta"){
+			} else if (operacion == "resta") {
 				Resta(num1, num2);
-			}else if(operacion == "division"){
+			} else if (operacion == "division") {
 				Dividir(num1, num2);
-			}else if(operacion == "multiplicacion"){
+			} else if (operacion == "multiplicacion") {
 				Multiplicar(num1, num2);
-			}else{
+			} else {
 				alert("No está disponible la operación :)");
 			}
 
-			respRepetir = prompt("¿Desea realizar otra operación? (y/n)");
-		}while(respRepetir == "y");
+			respRepetir = prompt("¿Desea realizar otra operación? [y | n]");
+		} while (respRepetir == "y");
 
 		alert("Se ha terminado el programa :)");
 	</script>
 </head>
+
 <body>
-	
+
 </body>
+
 </html>

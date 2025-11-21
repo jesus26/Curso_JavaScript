@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
-	<title>09 y 10 - POO</title>
+	<title>09 y 10 - POO I</title>
+
+	<script>
+		/*Dentro de la POO todos los objetos tienen características y capacidades o dicho de otra forma tienen
+		atributos (que lo describen) y métodos (lo que puede hacer)
+		
+		ej: 
+		Objeto: lavadora
+		Atributos: alto, ancho, color, peso
+		Métodos: lavar, algunas incluso secar
+
+		Instancia: Objeto que se crea a partir de una clase base, por ejemplo un vocho y un ferrari son provenientes de la clase auto, aunque no se vean similares comparten caracteristicas y métodos comunes.
+
+		Nomenclatura del punto
+		- Se utiliza para modificar propiedades de nuestra instancia, la sintaxis es: 
+			nombreInstancia.propiedadACambiar = "nuevoValor"; <-- El nuevo valor va siempre entre comillas
+		- Se utiliza para llamar métodos de nuestra instancia, la sintaxis es:
+			nombreInstancia.metodoAEjecutar(parametrosOpcionales);
+
+		otros ejemplos son:
+		document.write(); <-- document = objeto y write = un método
+		window.alert(); <-- generalmente se usa sólo alert(); porque el objeto window está siempre presente
+		window.prompt();
+		*/
+	</script>
 </head>
+
 <body>
 	<input type="button" id="button1">
 	<input type="button" id="button2">
@@ -13,41 +39,42 @@
 	<input type="text" id="nombre">
 
 	<script type="text/javascript">
-		//Obtener elementos de la hoja html y alamacenarlo en una variable.
+		//Obtener elementos de la hoja html y alamacenarlos en variables.
 		var btnUno = document.getElementById("button1");
 		var btnDos = document.getElementById("button2");
 		var btnTres = document.getElementById("button3");
 		var txtNombre = document.getElementById("nombre");
-
+		
 		//modificar ancho de los botones.
-		btnUno.style.width = "200px";
-		btnDos.style.width = "250px";
-		btnTres.style.width = "150px";
+		btnUno.style.width = "250px";
+		btnDos.style.width = "350px";
+		btnTres.style.width = "180px";
 
 		//modificar el alto
-		btnUno.style.height = "40px";
+		btnUno.style.height = "35px";
 		btnDos.style.height = "40px";
-		btnTres.style.height = "40px";
+		btnTres.style.height = "50px";
 
 		//Modificar el color
 		btnUno.style.background = "#F00";
 
 		//Poner el foco a un bjeto
-		btnDos.focus();
+		btnTres.focus();
 
 		//Cambiar fondo al campo de texto.
-		txtNombre.style.background="blue";
-		
+		txtNombre.style.background = "blue";
+
 		//manipular el valor del cuadro de texto
 		txtNombre.value = "Escriba su nombre";
 		txtNombre.style.color = "white";
-		
+
 		button1.value = "Botón 1";
 		button2.value = "Botón 2";
-		button3.value = "Botón 3";
-		
-		//Manipular el texto...
-		txtNombre.style.height = "40px";
+		button3.value = "Botón 333";
+
+		//Manipular el alto del campo de texto...
+		txtNombre.style.height = "30px";
 	</script>
 </body>
+
 </html>

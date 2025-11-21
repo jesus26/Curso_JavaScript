@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Ejercicio Calculadora</title>
 
 	<style>
-		.numero{
+		.numero {
 			width: 60px;
 			height: 60px;
 		}
 
-		.igual{
+		.igual {
 			width: 120px;
 			height: 60px;
 		}
 
-		table{
+		table {
 			margin: auto;
 		}
 
-		.color_display{
+		.color_display {
 			height: 30px;
 			background-color: #000;
 			border: medium #FFF;
@@ -29,54 +30,83 @@
 			text-align: right;
 			padding: 5px;
 		}
-
 	</style>
 	<script>
+		//Variable usada para ir almacenando valores
 		var cifra = "";
+
 		var acumulado = 0;
+		var p_operacion = true;
 		var sumar = false;
 		var restar = false;
 
-		function displayNumero(numero){
+		function displayNumero(numero) {
+			//Detectando elemento txt
 			var disp = document.getElementById("display");
 
+			//Asignando valor a txt
 			disp.value = cifra + numero;
 
+			//Asignando nuevo valor a cifra
 			cifra = disp.value;
 		}
 
-		function Suma(){
-			acumulado += parseInt(cifra);
-			document.getElementById("display").value = acumulado;
+		function suma() {
+			if (restar) {
+				//Asignarle el valor de cifra a acumulado: acumulado = acumulado + cifra;
+				acumulado -= parseInt(cifra);
+
+				//Asignando valor para mostrar en display el resultado
+				document.getElementById("display").value = acumulado;
+			} else {
+				//Asignarle el valor de cifra a acumulado: acumulado = acumulado + cifra;
+				acumulado += parseInt(cifra);
+
+				//Asignando valor para mostrar en display el resultado
+				document.getElementById("display").value = acumulado;
+			}
+
 			cifra = "";
 			sumar = true;
 			restar = false;
+			p_operacion = false;
 		}
 
-		function Resta(){
-			if(sumar){
-				acumulado += parseInt(cifra);
+		function resta() {
+			if (p_operacion == false) {
+				if (sumar) {
+					acumulado += parseInt(cifra);
 
-				document.getElementById("display").value = acumulado;
-			}else{
-				acumulado -= parseInt(cifra);
-				document.getElementById("display").value = acumulado;
+					document.getElementById("display").value = acumulado;
+				} else {
+					acumulado -= parseInt(cifra);
+					document.getElementById("display").value = acumulado;
+				}
+			} else {
+				acumulado = parseInt(cifra);
+				p_operacion = false;
 			}
 
 			cifra = "";
 			sumar = false;
 			restar = true;
+
 		}
 
-		function resultado(){
-			if(sumar){
+		function resultado() {
+			if (sumar) {
 				document.getElementById("display").value = acumulado + parseInt(cifra);
-			}else if(restar){
+			} else if (restar) {
 				document.getElementById("display").value = acumulado - parseInt(cifra);
 			}
+
+			//Almacenar lo que hay en la pantalla de la calculadora
+			acumulado = parseInt(document.getElementById("display").value);
+			cifra = 0;
 		}
 	</script>
 </head>
+
 <body>
 	<table width="15%" border="1">
 		<tr>
@@ -86,10 +116,10 @@
 		</tr>
 		<tr>
 			<td>
-				<input type="button" class="numero" id="btnSuma" value="+" onclick="Suma();">
+				<input type="button" class="numero" id="btnSuma" value="+" onclick="suma();">
 			</td>
 			<td>
-				<input type="button" class="numero" id="btnResta" value="-" onclick="Resta();">
+				<input type="button" class="numero" id="btnResta" value="-" onclick="resta();">
 			</td>
 			<td>
 				<input type="button" class="numero" id="btnMultiplicacion" value="*">
@@ -141,9 +171,10 @@
 			</td>
 		</tr>
 	</table>
+
+	<script>
+		document.getElementById("display").value = 0;
+	</script>
 </body>
 
-<script>
-	document.getElementById("display").value = 0;
-</script>
 </html>

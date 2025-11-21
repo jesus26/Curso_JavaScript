@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8">
-		<title>05 - Sintaxis Basica III, Operadores Básicos</title>
-		<script type="text/javascript">
-			/*Los operadores básicos son +, -, *, / */
-			var precionUnidad, cantidad, total;
-			precionUnidad = 5;
-			cantidad = 3;
-			total = precionUnidad * cantidad;
-			
-			/*el simbolo + sirve para concatenar*/
-			//alert("El importe total de la compra es: " + total + " pesos");
 
-			/*Convertir una variable string a int*/
-			var vasos, platos, totalTrastes;
-			vasos = "9";
-			platos = 8;
-			totalTrastes = Number(vasos) + platos;
-			
+<head>
+	<meta charset="UTF-8">
+	<title>05 - Sintaxis Basica III, Operadores Básicos</title>
+	<script type="text/javascript">
+		/*Los operadores básicos son: +, -, * y / */
+		/*Orden de operadores
+			- Operaciones entre paréntesis
+			- Multiplicaciones y diviciones de izquierda a derecha
+			- Sumas y restas de izquierda a derecha
+		*/
+		var precionUnidad, cantidad, total;
+		precionUnidad = 5;
+		cantidad = 3;
+		total = precionUnidad * cantidad;
+
+		/*el símbolo + sirve para concatenar una cadena con otra cadena, valor de una variable o valor directamente*/
+		//alert("El importe total de la compra es: " + total + " pesos");
+
+		/*Convertir una variable string a int*/
+		var vasos, platos, totalTrastes;
+		vasos = "9";
+		platos = 8;
+		//Función Number: Convierte un string en un número siempre y cuando sea posible, si se pasa una palabra no será posible
+		totalTrastes = Number(vasos) + platos;
+
+	</script>
+</head>
+
+<body>
+	<h1>Utilizando operadores</h1>
+	<h2>
+		<script>
+			document.write("El importe total de la compra es: " + total + " pesos");
 		</script>
-	</head>
-	<body>
-		<h1>Utilizando operadores</h1>
-		<h2>
-			<script>
-				document.write("El importe total de la compra es: " + total + " pesos");
-			</script>
+		
 		<h2>
 			<script>
 				document.write("El total de trastes es " + totalTrastes);
 			</script>
-		<h3>
-		</h3>
-	</body>
+		</h2>
+	</h2>
+</body>
+
 </html>

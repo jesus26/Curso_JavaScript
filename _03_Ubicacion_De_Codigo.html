@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>03 - Sintaxis Básica I, Ubicación de código</title>
 
-	<link rel="stylesheet" href="css/estilo.css"> <!-- Enlace a un archivo de estilos-->
-	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script> <!-- Enlace a documento de JQuery-->
+	<!-- Enlace a un archivo de estilos -->
+	<link rel="stylesheet" href="css/estilo.css">
 
-	<script type="text/javascript" src="js/ejemplo.js" >
-		/*se puede tener un enlace a un documento externo y/o un bloque de script en el mismo documento*/
-		//Es muy importante la posición, depende de que haya primero se ejecutará primero de arriba hacía abajo.
+	<!-- Enlace a documento de JQuery -->
+	<script type="text/javascript" src="Jquery/jquery-1.6.3.min.js"></script>
+
+	<!-- Enlace a un archivo externo de JS -->
+	<script type="text/javascript" src="js/ejemplo.js">
+		/*Se puede tener un enlace a un documento externo y/o un bloque de <script> en el mismo archivo de HTML*/
+		/*Es muy importante la posición, ya que el navegador ejecuta línea a línea de arriba hacía abajo, si elcódigo js
+		se encuentra antes de body se ejecutará antes de cargar la página, si está al final de body se ejecutará después
+		de que la página haya cargado
+		*/
 	</script>
 	<script>
-		alert("Hola mundo de JavaScript"); //alerta modal(se pone como principal sin dejar manipular la página)
+		//alerta modal (se pone como principal sin dejar manipular la página y detiene el flujo del la ejecución del código)
+		alert("Hola mundo de JavaScript");
 	</script>
 </head>
+
 <body>
 	<h1>Hola Mundo De Javascript</h1>
+	<h2>
 		<script type="text/javascript">
-			//para escribir dentro del documento html; si se pone una vez cargado el contenido se borra todo lo existente
-			document.write("Mensaje escrito con document.write"); 
+			//Instrucción para escribir dentro del documento html, tomará el formato de la etiqueta html padre si la hay
+			document.write("Mensaje escrito con document.write");
 		</script>
+	</h2>
 	<p>
-		Bienvenidos a mejorar el aprendizaje a diario <span>Aprendiendo De forma autodeterminada</span>
+		Bienvenidos a mejorar el aprendizaje a diario <span>Aprendiendo De forma autodidacta</span>
 	</p>
 
-	<img src="img/arbol.jpg" width="35%"> <!-- Llamando un imagen -->
+	<img src="img/arbol.jpg" width="35%"> <!-- Llamando a una imágen -->
 
 	<script type="text/javascript">
-		//Se recomienda que al poner el script al final del body.
+		//Se recomienda poner el script al final del body.
 		document.write("Otro texto escrito con document.write");
 	</script>
 
 	<script>
 		//Utilizando Jquery
-		/*JQuery es una libreria ya creada de JavaScript, de codigo abierto*/
-		$(function(){
-			//Aparecer body con efecto de desvanecer
-			$("body").hide().fadeIn(3000); //fadeIn, efecto que desvanece, parametro en milisegundos
+		/*JQuery es una librería ya creada de JavaScript, de codigo abierto*/
+		$(function () {
+			//Aparecer el body con efecto de desvanecer
+			$("body").hide().fadeIn(2000); //fadeIn, efecto que desvanece, parámetro en milisegundos
 		});
-		//Se recomienda poner el código de js en archivo externo para la reutilización de código
+		//Se recomienda poner el código de JS en archivo externo para la reutilización de código
 	</script>
 </body>
+
 </html>

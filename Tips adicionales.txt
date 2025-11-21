@@ -1,0 +1,108 @@
+- Cuando haya un error y por ejemplo no se muestre nada en la web se puede abrir la consola del navegador para saber la causa
+- Mantén el código siempre bien indentado
+
+	//Modificar una propiedad de un elemento (botón, campo de texto, img, etc)
+	myElemento.style.propiedadACambiar = "nuevo valor";
+	txtNombre.style.color = "white";
+
+Funciones de document
+	document.write("Otro texto escrito con document.write")
+	//Permite escribir contenido desde JS a HTML, el texto tendrá el formato de las etiquetas que lo rodeen
+	document.write("Contenido a escribir en HTML desde JS")
+
+	document.getElementById("idDeElementoAEcontrar");
+	//Permite obtener un elemento de la UI por el atributo Id
+	document.getElementById("id");
+	
+	document.getElementsByName("nameDeElementosAEcontrar");
+	//Permite obtener un array de elementos de la UI por el atributo name
+	document.getElementsByName("name");
+	
+	document.getElementsByTagName("etiquetaDeElementosAEcontrar");
+	//Permite obtener un array con todos los elementos de determinada etiqueta
+	document.getElementsByTagName("etiquetaDeElementos");
+	
+	document.getElementsByClassName("claseDeElementosAEcontrar");
+	//Permite obtener un array de todos los elementos de determinada etiqueta
+	document.getElementsByClassName("claseDeElementos");
+	
+	
+Funciones
+	alert(cualquierValor)
+		//Permite imprimir un mensaje en un pop up modal que bloque el manejo de la página mientras se muestra
+		alert("Hola mundo de JavaScript");
+		
+	prompt("Mensaje a usuario")
+	//muestra un pop up con un campo de texto que permite al usuario ingresar un valor desde el teclado
+	prompt("Introduce cuantos años tienes");
+
+	isNan(cualquierValor)
+		//permite saber si un valor es númerico, en caso de NO ser número regresa true, en caso contrario se regresará false, generalmente se usa en condicionales
+		isNan("59")
+	
+	Number(valorAConvertir)
+		//permite convertir un string a un número, siempre y cuando sea posible, es decir que el valor si sea un número aunque sea string
+		Number("34");
+	
+	focus();
+		//permite poner el foco en determinado objeto (botón, campo de texto, etc)
+		miObjeto.focus();
+		
+Métodos de string
+	parseInt(numeroEnString)
+		//Convertir de string a entero, siempre y cuando sea posible, es decir que el valor si sea un número aunque sea string
+		var numero1 = parseInt("89");
+
+	typeof(nombreVariable)
+		//permite saber que tipo de valor es una variable
+		alert(typeof("Jesús"));
+
+Métodos de arrays
+	length
+	//nos dice la cantidad de elementos dentro de un array
+	miArray.length
+	
+	push("elemento")
+	agregar uno o más elementos al final del array
+	myArray.push("nuevoElementoAlFinal");
+	
+	unshift("elemento")
+	//agrega uno o más elementos al inicio del array
+	myArray.unshift("nuevoElementoAlInicio");
+	
+	pop()
+	//elimina el último elemento de un array
+	myArray.pop();
+	
+	shift()
+	//elimina el primer elemento de un array
+	myArray.shift();
+	
+	splice(indiceParaComenzarABorrar, numeroDeElementosABorrar)
+	//permite borrar la cantidad de elementos deseada desde un indice indicado
+	juguetes.splice(0, 1);
+	
+	sort()
+	//permite ordenar un array de strings de fomra ascendente
+	myArray.sort()
+	
+	reverse()
+	//permite ordenar de forma invesa el array en base a su orden actual, casi siempre se usa despues de usar el sort()
+	myArray.reverse()
+	
+	sort(function (a, b) { return a - b });
+	//Permite ordenar de forma ascendente un array numérico
+	myArray.sort(function (a, b) { return a - b });
+	
+	sort(function (a, b) { return b - a });
+	//Permite ordenar de forma descendente un array numérico
+	myArray.sort(function (a, b) { return b - a });
+
+funciones de Math
+	round(numeroARedondear);
+	//Permite redondear un número decimal convirtiendolo en entero
+	Math.round(numeroARedondear);
+	
+	random()
+	//genera un número random entre 0 - 1, el resultado es decimal
+	Math.random();

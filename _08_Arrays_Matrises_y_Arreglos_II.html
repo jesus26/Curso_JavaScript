@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>08 - Sintaxis Básica V - Arrays, Matrices, Arreglos II</title>
 	<script type="text/javascript">
-		var articulos = ["Mouse","CPU","Keyword","Screen"];
-		var juguetes = new Array("Trompo","Canicas","Yoyo","Loteria");
+		var articulos = ["Mouse", "CPU", "Keyboard", "Monitor"];
+		var juguetes = new Array("Trompo", "Canicas", "Yoyo", "Lotería");
 
 		/*Crear un array vacio, cuando no se conoce la longitud que va a tener*/
 		var vacio = [];
 
 		/*Para agregar un elemento al array*/
-		/*artitulos.push("nombreArticulo"), el push agrega el elemento al final 
-		del array, se pueden agregar en conjunto por ejemeplo:
+		/*articulos.push("nombreArticulo"), el push agrega el elemento al final del array, se pueden agregar
+		en conjunto, por ejemeplo:
 			articulos.push("proyector","celular","laptop")*/
 
-		/*articulos.unshift("futbol"), el unshift agrega un elemento al principio 
-		del array*/
+		/*articulos.unshift("futbol"), el unshift agrega un elemento al principio del array*/
 
 		/*Para eliminar elementos del array*/
 		/*articulos.pop(), eliminar el elemento del final*/
 		/*articulos.shift(), eliminar el elemento del inicio*/
 	</script>
 </head>
+
 <body>
 	<script type="text/javascript">
 		document.write("<p>El primer juguete es <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
-		
+
 		//Agregando un elemento al inicio del array
 		juguetes.unshift("Pironola");
 		document.write("<p>Se ha agregado el juguete <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
-		
+
 		//Agregando un elemento al final del array
 		juguetes.push("Balero");
 		document.write("<p>Ya agregamos otro juguete al final y es <strong>");
 		document.write(juguetes[juguetes.length - 1]);
 		document.write("</strong></p>");
-		
+
 		/*
 		//Agregar un elemento por el usuario
 		articulos.push(prompt("Introduce otro elemento para el final"));
@@ -55,40 +56,39 @@
 
 		//Borrar el primer elemento
 		juguetes.shift();
-		document.write("<p>Se ha borrado un elemento, el primer juguete es <strong>");
+		document.write("<p>Se ha borrado un elemento, ahora el primer juguete es <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
-		
+
 		//Borrar el último elemento
 		juguetes.pop();
-		document.write("<p>Se ha borrado el último elemento, el último juguete es <strong>");
-		document.write(juguetes[juguetes.length-1]);
+		document.write("<p>Se ha borrado el último elemento, ahora el último juguete es <strong>");
+		document.write(juguetes[juguetes.length - 1]);
 		document.write("</strong></p>");
 
 		/*Eliminar un elemento pasando el índice, con splice, le damos el indice de donde 
 		queremos que comience a borrar y le decimos cuantos elementos debe borrar*/
-		juguetes.splice(0,1);
+		juguetes.splice(0, 1);
 
 		document.write("<p>Se ha borrado el primer elemento pasando el indice, " +
-			"el primer juguete es <strong>");
+			"ahora el primer juguete es <strong>");
 		document.write(juguetes[0]);
 		document.write("</strong></p>");
-		
+
 		document.write("<p>Ahora es momento de ordenar de forma ascendente: <strong>");
 		//Ordenar array de forma ascendente
 		juguetes.sort();
-		for(var i = 0; i <= (juguetes.length - 1); i++){
+		for (var i = 0; i <= (juguetes.length - 1); i++) {
 			document.write(juguetes[i] + ", ");
 		}
 		document.write("</strong></p>");
 
-		
-		document.write("<p>El turno de ordenar de forma descendente: <strong>");
+		document.write("<p>Es turno de ordenar de forma descendente: <strong>");
 		//Ordenar array de forma ascendente
 		juguetes.sort();
-		//
+		//Cambiar orden del array
 		juguetes.reverse();
-		for(var i = 0; i <= (juguetes.length - 1); i++){
+		for (var i = 0; i <= (juguetes.length - 1); i++) {
 			document.write(juguetes[i] + ", ");
 		}
 		document.write("</strong></p>");
@@ -96,27 +96,28 @@
 		document.write("<p>Momento de trabajar con arrays de enteros</p>");
 		document.write("<p>Array original <strong>");
 		var array_enteros = [20, 13, 87, 8, 231, 3];
-		for(var i = 0; i <= (array_enteros.length - 1); i++){
+		for (var i = 0; i <= (array_enteros.length - 1); i++) {
 			document.write(array_enteros[i] + ", ");
 		}
 		document.write("</strong></p>");
 
 		document.write("<p>Array ordenado ascendente <strong>");
-		array_enteros.sort(function(a, b){return a-b});
-		for(var i = 0; i <= (array_enteros.length - 1); i++){
-			document.write(array_enteros[i] + ", ");
-		}
-		document.write("</strong></p>");
-		
-		document.write("<p>Array ordenado descendente <strong>");
-		array_enteros.sort(function(a, b){return b-a});
-		for(var i = 0; i <= (array_enteros.length - 1); i++){
+		array_enteros.sort(function (a, b) { return a - b });
+		for (var i = 0; i <= (array_enteros.length - 1); i++) {
 			document.write(array_enteros[i] + ", ");
 		}
 		document.write("</strong></p>");
 
-		/*Para sacar el menor o el mayor es necesario ordenar antes, por ejemplo si se 
+		document.write("<p>Array ordenado descendente <strong>");
+		array_enteros.sort(function (a, b) { return b - a });
+		for (var i = 0; i <= (array_enteros.length - 1); i++) {
+			document.write(array_enteros[i] + ", ");
+		}
+		document.write("</strong></p>");
+
+		/*Para sacar el menor o el mayor es necesario ordenar antes, por ejemplo si se
 		desea el mayor se ordena y se obtiene el primero o el último según sea el caso.*/
 	</script>
 </body>
+
 </html>

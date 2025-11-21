@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>19 y 20 - Control flujo. Bucle For</title>
 
 	<script type="text/javascript">
-		//Declarando variable que se imprimira.
+		//Declarando variable que se imprimirá.
 		var variable = "Jesus";
 
 		//Utilizando el ciclo for.
-		//i puede ir ascendiendo o descendiendo.
-		for(var i = 0; i < 10; i++){
+		/*el valor de la variable i puede ir ascendiendo o descendiendo, generalmente se asciende/desciende en 1 pero
+		también se puede programar para que sea en cantidades diferentes a 1, eso se indíca en el tercer parámetro
+		poner: i+=2 y se incrementaría en 2*/
+		for (var i = 0; i < 10; i++) {
 			document.write(variable + "<br>");
 		}
 
 		//Declarando array para recorrer con un ciclo for.
-		var misPasatiempos = ["Caminar", "Programar", "Jugar football", 
-							  "Ver el footbol en vivo", "Pasear en bicicleta", "Nadar", 
-							  "Ver freestyle de football", "Ver freestyle de rap"];
+		var misPasatiempos = ["Pasear en bicicleta", "Correr", "Caminar", "Leer", "Aprender", "Programar",
+		"Jugar futbol", "Ver freestyle"];
 
 		//Haciendo salto de linea.
 		document.write("<br><br>");
 
 		//Recorriendo array con for.
-		for(var i = 0; i < misPasatiempos.length; i++){
+		for (var i = 0; i < misPasatiempos.length; i++) {
 			document.write(misPasatiempos[i] + ", ");
 		}
 
@@ -37,8 +39,8 @@
 		var contador = 0;
 
 		//Metiendo valores al array mediante un ciclo while
-		while(valorArrayIndeterminado != "ya"){
-			valorArrayIndeterminado = prompt("Ingresa las cosas que te gustan [Ya] para terminar");
+		while (valorArrayIndeterminado != "ya") {
+			valorArrayIndeterminado = prompt("Ingresa las cosas que te gustan; ingresa [Ya] para terminar");
 
 			arrayIndeterminado[contador] = valorArrayIndeterminado;
 
@@ -48,16 +50,18 @@
 		//Haciendo salto de linea.
 		document.write("<br><br>");
 
-		//Eliminar el ultimo elemento que termina el ciclo de llenado.
+		//Eliminar el ultimo elemento que termina el ciclo de llenado (la palabra Ya).
 		arrayIndeterminado.pop();
 
 		//Recorrer array indeterminado con ciclo for.
-		for(var i = 0; i < arrayIndeterminado.length; i++){
+		for (var i = 0; i < arrayIndeterminado.length; i++) {
 			document.write(arrayIndeterminado[i] + ", ");
 		}
 	</script>
 </head>
+
 <body>
-	
+
 </body>
+
 </html>

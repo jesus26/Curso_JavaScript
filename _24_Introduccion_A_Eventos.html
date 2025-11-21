@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Introduccion a eventos</title>
@@ -9,17 +10,33 @@
 
 		/*Eventos más importantes.
 		onblur - cuando se deselecciona un elemento.
-		onclick . clickear con botón izquierda, sirve para todos los elementos
+			aplica para: <button>, <input>, <label>, <select>, <textarea>, <body>
+		onchange - deseleccionar un elemento que se ha modificado
+			aplica para: <input>, <select>, <textarea>
+		onclick - clickear con botón izquierda
+			aplica para: Todos los elementos
+		ondblclick - dar click dos veces seguidas en un elemento
+			aplica para: Todos los elementos
+		onfocus - seleccionar un elemento
+			aplica para: <button>, <input>, <label>, <select>, <textarea>, <body>
+		onkeydown - pulsar una tecla sin soltar
+			aplica para: elementos de formulario y <body>
+		onkeypress - pulsar una tecla
+			aplica para: elementos de formulario y <body>
+		onkeyup - soltar una tecla pulsada
+			aplica para: elementos de formulario y <body>
 		*/
 
-		//Funcion para crear un alert.
-		function alerta(){
+		//Función para crear un alert.
+		function alerta() {
 			alert("Aprendiendo JavaScript Rápido");
 		}
 	</script>
 </head>
+
 <body>
 	<img src="img/vocho1.jpg" ondblclick="alerta();">
 	<!-- ondblclick-->
 </body>
+
 </html>

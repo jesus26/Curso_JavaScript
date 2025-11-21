@@ -5,32 +5,44 @@
 	<title>04 - Sintaxis Básica II, Estructuras básicas</title>
 	<script type="text/javascript">
 		/*
-		- Las funciones siempre llevan parentesis()
 		- Todas las sentencias terminan en ;
-		
-		Variable.- Espacio en la memoria del ordenador(RAM) donde se almacena un valor 
-		que puede cambiar durante la ejecución del programa.
+		- Funciones predefinidas: funciones que ya vienen incluídas en el lenguaje, por ejemplo, alert() y  document.write().
+			Las funciones siempre llevan paréntesis()
 
-		Para declarar una variable el nombre de esta debe iniciar con letra, el simbolo $ 
-		o _(guion bajo).
-
-		El lenguage es caseSensitive, es decir, es diferente numero y Numero.
-
-		Los 3 tipos de datos principales en js son:
-			- numericos - incluye decimales 
+		Los 3 tipos de datos principales en JS son:
+			- numéricos - incluye enteros y decimales 
 			- string - texto entre comillas dobles o simples. 
 			- booleanos - solo true o false
+
+		Variable.- Espacio en la memoria del ordenador (RAM) donde se almacena un valor que puede cambiar durante
+		la ejecución del programa.
+
+		Sintaxis para declarar una variable:
+			var nombreDeVariable;
+
+		Reglas para nombres de variables
+			- Debe iniciar con letra, el simbolo $ o _ (guion bajo).
+			- Sólo puede contener letras, números, $ y _
+			- Son caseSensitive, es decir hay diferencias entre mayúsculas y minúsculas, es diferente miVariable y Mivariable.
+			- No deben ser palabras reservadas
+			- Se recomienda que sean descriptivas
 		
-		Declarando variables, se puede tambien no utilizar la palabra "var" pero se creará
+		Declarando variables, se puede también no utilizar la palabra "var" y en ese caso se creará una variable global.
+
+		Se pueden declarar más de una variables en una sola sentencia
+		var variable1, variable2, variable3;
+
+		También se pueden declarar y asignar un valor en una misma sentencia
+		var variable1 = 5, variable2 = 10, variable3 = "viernes";
 		*/
-		una variable global.
-		var nombre = "Jesus";
-		var edad = 22;
+
+		var nombre = "Jesús";
+		var edad = 25;
 		var numeroMeses;
 		variable = 30;
 
 		//Imprimiendo variables concatenadas con el signo +
-		alert("Nombre: " + nombre + ", Edad: " + edad + ", Varible sin declarar " + variable);
+		alert("Nombre: " + nombre + ", Edad: " + edad + ", Varible global: " + variable);
 		
 		numeroMeses = 12;
 		alert(numeroMeses);
